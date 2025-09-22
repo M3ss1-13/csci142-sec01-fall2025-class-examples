@@ -1,42 +1,25 @@
-package Shapes;
-
-
+package shapes;
 
 public class Square {
-private double sideLength; 
- 
+    private double sideLength;
 
+    public Square() {
+        this(1.0);
+    }
 
-public Square() {
-	this.sideLength = 1.0f;
-	
-	
-	
-}
-	public Square(double sideLength) {
-		if (sideLength <= 0) {
-			this.sideLength = 1.0f;
-		}
-		this.sideLength = sideLength;
+    public Square(double sideLength) {
+        if (sideLength < 0.0) {
+            throw new IllegalArgumentException("sideLength must be >= 0");
+        }
+        this.sideLength = sideLength;
+    }
 
-	}
-	
-	public double getSideLength() {
-		return sideLength;
-	}
-	
-	public void setSideLength(double sideLength) {
-		this.sideLength = sideLength;
-	}
-	
-	public double getArea() {
-		return this.sideLength * sideLength;
-	}
-	
-	
-	
-	
-	
-	
-	
+    public double getSideLength() {
+        return sideLength;
+    }
+
+    public double area() {
+        return sideLength * sideLength;
+    }
+    
 }
