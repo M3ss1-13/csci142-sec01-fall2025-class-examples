@@ -1,4 +1,4 @@
-package shapes;
+package Shapes;
 
 public class Square {
     private double sideLength;
